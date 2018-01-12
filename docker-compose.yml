@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+
+  redis:
+    image: redis
+
+  web:
+    build:
+      context: ./web/
+    ports:
+      - "8000:8000"
+    links:
+      - redis
+
+  nginx:
+    restart: always
+    build: ./nginx/
+    ports:
+      - "80:80"
+    links:
+      - web
