@@ -1,9 +1,8 @@
-version: '2'
+version: "3"
 
 services:
-
   redis:
-    image: redis
+    image: redis:buster
 
   web:
     build:

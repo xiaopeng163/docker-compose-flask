@@ -1,4 +1,5 @@
-FROM python:2.7
+FROM python:3.8.5-slim-buster
+
 LABEL maintainer="Peng Xiao<xiaoquwl@gmail.com>"
 
 COPY . /
